@@ -1,0 +1,374 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+
+  html {
+    scroll-behavior: smooth;
+    cursor: default;
+  }
+
+
+  body {
+
+    @apply text-[#4b3535] antialiased overflow-x-hidden;
+
+    background:#F9E7E3;
+
+    font-family:
+    'Inter',
+    system-ui,
+    -apple-system,
+    sans-serif;
+
+    -webkit-font-smoothing: antialiased;
+
+  }
+
+
+
+  h1,
+  h2,
+  h3,
+  h4 {
+
+    font-family:
+    'Playfair Display',
+    serif;
+
+    letter-spacing:-0.02em;
+
+  }
+
+}
+
+
+
+/* Glass Cards */
+
+.glass-morphism {
+
+  @apply backdrop-blur-2xl bg-white/40 border border-white/60;
+
+  box-shadow:
+  0 20px 60px rgba(166,100,102,0.12);
+
+}
+
+
+
+/* Soft floating blobs */
+
+.glass-blob {
+
+  @apply absolute rounded-full mix-blend-multiply filter blur-[80px] opacity-30 animate-blob;
+
+}
+
+
+
+@keyframes blob {
+
+  0% {
+
+    transform:
+    translate(0,0)
+    scale(1);
+
+  }
+
+
+  33% {
+
+    transform:
+    translate(30px,-50px)
+    scale(1.1);
+
+  }
+
+
+  66% {
+
+    transform:
+    translate(-20px,20px)
+    scale(0.9);
+
+  }
+
+
+  100% {
+
+    transform:
+    translate(0,0)
+    scale(1);
+
+  }
+
+}
+
+
+
+.animate-blob {
+
+  animation:
+  blob 10s infinite alternate ease-in-out;
+
+}
+
+
+
+
+
+/* Reveal animation */
+
+@keyframes reveal-up {
+
+  0% {
+
+    opacity:0;
+
+    transform:
+    translateY(40px);
+
+    filter:blur(10px);
+
+  }
+
+
+  100% {
+
+    opacity:1;
+
+    transform:
+    translateY(0);
+
+    filter:blur(0);
+
+  }
+
+}
+
+
+
+.animate-reveal {
+
+  animation:
+  reveal-up 1.4s cubic-bezier(.16,1,.3,1) forwards;
+
+}
+
+
+
+.delay-100 {
+  animation-delay:.1s;
+}
+
+
+.delay-200 {
+  animation-delay:.2s;
+}
+
+
+.delay-300 {
+  animation-delay:.3s;
+}
+
+
+
+
+
+/* Artwork floating */
+
+@keyframes float-slow {
+
+  0%,100% {
+
+    transform:
+    translateY(0);
+
+  }
+
+
+  50% {
+
+    transform:
+    translateY(-18px);
+
+  }
+
+}
+
+
+
+.animate-float-slow {
+
+  animation:
+  float-slow 8s ease-in-out infinite;
+
+}
+
+
+
+
+
+/* Gallery artwork zoom */
+
+@keyframes artworkFloat {
+
+  from {
+
+    transform:
+    scale(1);
+
+  }
+
+
+  to {
+
+    transform:
+    scale(1.05);
+
+  }
+
+}
+
+
+
+.animate-artwork {
+
+  animation:
+  artworkFloat 12s ease-in-out infinite alternate;
+
+}
+
+
+
+
+
+/* Cherry Blossom Animation */
+/* Used only by Cherryblossom.jsx */
+
+.cherry-petal {
+
+  position:absolute;
+
+  top:-20px;
+
+  width:12px;
+
+  height:12px;
+
+  background:#E07C8E;
+
+  border-radius:
+  100% 0 100% 100%;
+
+  opacity:.5;
+
+  transform:rotate(45deg);
+
+  animation:
+  fallingPetals linear infinite;
+
+}
+
+
+
+@keyframes fallingPetals {
+
+
+  0% {
+
+    transform:
+    translateY(-20px)
+    translateX(0)
+    rotate(45deg);
+
+    opacity:0;
+
+  }
+
+
+
+  10% {
+
+    opacity:.6;
+
+  }
+
+
+
+  50% {
+
+    transform:
+    translateY(50vh)
+    translateX(50px)
+    rotate(180deg);
+
+  }
+
+
+
+  100% {
+
+    transform:
+    translateY(110vh)
+    translateX(-40px)
+    rotate(360deg);
+
+    opacity:0;
+
+  }
+
+}
+
+
+
+
+
+/* Selection */
+
+::selection {
+
+  background:#E3BAB6;
+
+  color:#4b3535;
+
+}
+
+
+
+
+
+/* Scrollbar */
+
+::-webkit-scrollbar {
+
+  width:6px;
+
+}
+
+
+::-webkit-scrollbar-track {
+
+  background:#F9E7E3;
+
+}
+
+
+::-webkit-scrollbar-thumb {
+
+  background:#E3BAB6;
+
+  border-radius:20px;
+
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+
+  background:#A66466;
+
+}
