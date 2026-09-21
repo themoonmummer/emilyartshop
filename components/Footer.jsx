@@ -118,7 +118,7 @@ const Footer = () => {
               "
             >
 
-              Sammy Art
+              Emily Art
 
             </h3>
 
@@ -362,7 +362,7 @@ const Footer = () => {
             "
           >
 
-            © 2026 SAMMY ART SHOP
+            © 2026 EMILY ART SHOP
 
           </p>
 

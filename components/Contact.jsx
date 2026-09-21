@@ -105,7 +105,7 @@ const Contact = () => {
         {/* Instagram Card */}
 
         <a
-          href="https://instagram.com/sammyartshop"
+          href="https://instagram.com/artshop"
           target="_blank"
           rel="noopener noreferrer"
           className="
@@ -214,7 +214,7 @@ const Contact = () => {
               duration-500
               "
             >
-              @sammyartshop
+              @emilyartshop
             </h3>
 
             <p

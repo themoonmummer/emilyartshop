@@ -137,7 +137,7 @@ const Header = () => {
 
         >
 
-          Sammy
+          Emily
           <span className="text-[#A66466]">
             Art
           </span>
