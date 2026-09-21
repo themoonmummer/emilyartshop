@@ -5,21 +5,21 @@
   "main": "index.js",
   "scripts": {
     "dev": "vite",
-    "build": "vite",
-    "preview": "vite"
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/themoonmummer/sammyartshop.git"
+    "url": "git+https://github.com/themoonmummer/emilyartshop.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "bugs": {
-    "url": "https://github.com/themoonmummer/sammyartshop/issues"
+    "url": "https://github.com/themoonmummer/emilyartshop/issues"
   },
-  "homepage": "https://github.com/themoonmummer/sammyartshop#readme",
+  "homepage": "https://github.com/themoonmummer/emilyartshop#readme",
   "dependencies": {
     "lucide-react": "^1.47.0",
     "react": "^19.3.0",
